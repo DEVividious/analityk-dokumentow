@@ -1,0 +1,32 @@
+[project]
+name = "analityk-dokumentow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.111.0",
+    "click>=8.4.1",
+    "inquirerpy>=0.3.4",
+    "markdown>=3.10.2",
+    "pymupdf>=1.27.2.3",
+    "python-docx>=1.2.0",
+    "python-dotenv>=1.2.2",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "weasyprint>=69.0",
+    "gliner>=0.2.27",
+]
+
+[project.scripts]
+analityk = "src.ui:run"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["pipeline: pełny pipeline z modelem GLiNER (wolne, pobiera/ładuje model)"]

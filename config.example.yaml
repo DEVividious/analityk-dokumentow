@@ -1,0 +1,16 @@
+# Szablon konfiguracji. Skopiuj i uzupełnij:
+#     cp config.example.yaml config.yaml
+# config.yaml jest poza repozytorium (.gitignore) — bezpiecznie trzymaj w nim
+# klucz API i hasła do PDF-ów.
+
+anonymizer:
+  gliner_model: urchade/gliner_multi-v2.1   # model NER (multilingual, CPU, ~0.3B)
+  gliner_threshold: 0.5                      # próg pewności — niżej = czulej
+
+claude:
+  model: claude-sonnet-4-6
+  api_key: ""        # klucz Anthropic; alternatywnie ANTHROPIC_API_KEY w .env (env ma pierwszeństwo)
+
+# Hasła do zaszyfrowanych PDF-ów — próbowane po kolei
+passwords: []
+#  - haslo_firmy
