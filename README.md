@@ -181,4 +181,3 @@ Każdy raport (PDF z paginacją + kopia MD) zawiera trzy sekcje:
 
 - **PDF** — w tym zaszyfrowane (hasła w `config.yaml`, próbowane po kolei; w razie potrzeby narzędzie zapyta o hasło)
 - **DOCX** — dokumenty Word
-```
